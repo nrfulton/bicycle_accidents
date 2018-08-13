@@ -5,7 +5,7 @@ class NathanGeoUtils:
   __DEBUG = False
 
   def pgh_dms_to_degrees(self, lat_dms_str, lon_dms_str):
-    """ Converts something like '40 25:05.948' to decimal degrees. Automatically makes longitude negative if not already. that's what makes this pgh-specific.... """
+    """ Converts something like '40 25:05.948' to decimal degrees. Automatically makes longitude negative if not already. that's what makes this pgh-specific... Based loosely on something from SO. @todo find relevant link. """
     lat_dms = self._parse_dms(lat_dms_str)
     lon_dms = self._parse_dms(lon_dms_str)
     if(lat_dms is None or lon_dms is None):
